@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <head>
     <title>things</title>
@@ -24,15 +26,29 @@
 </head>
 
 <body>
-    <h1>things</h1>
+   <h1>things</h1>
 
-    <div class="blog-post">
-        <h2><a href="post1.md" target="_blank">post 1</a></h2>
-    </div>
+<div class="blog-post">
+    <h2><a href="#" onclick="loadMarkdown('post1.md')">post 1</a></h2>
+</div>
 
-    <div class="blog-post">
-        <h2><a href="post2.md" target="_blank">post 2</a></h2>
-    </div>
+<div class="blog-post">
+    <h2><a href="#" onclick="loadMarkdown('post2.md')">post 2</a></h2>
+</div>
+
+<!-- Container to display the rendered markdown content -->
+<div id="markdown-content"></div>
+function loadMarkdown(filePath) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(text => {
+            const htmlContent = marked(text);
+            document.getElementById('markdown-content').innerHTML = htmlContent;
+        })
+        .catch(error => {
+            console.error("Error fetching the Markdown file: ", error);
+        });
+}
 
 </body>
 
