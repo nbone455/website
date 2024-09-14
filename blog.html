@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nic Jordan Bone - Blog</title>
+    <style>
+        body {
+      background-color: #ffffff; /* white background */
+      color: #000000;  /* black text color */
+      font-family: Arial, sans-serif; /* Modern font */
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: #000000; /* black  */
+    }
+    
+    p {
+      font-size: 20px;
+    }
+    
+    a {
+      color: #0047AB;  /* blue link color */
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #000000;
+    }
+    #search-container {
+            margin-bottom: 20px;
+        }
+    .blog-post {
+            margin-bottom: 30px;
+        }
+    #pagination {
+        margin-top: 20px;
+    }
+    #pagination button {
+        margin-right: 5px;
+    }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="interesting.html">Interesting Things</a></li>
+        </ul> 
+    </nav>
+
+    <h1>Blog</h1>
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search blog posts...">
+        <button onclick="searchPosts()">Search</button>
+    </div>
+
+    <div id="blog-posts"></div>
+
+    <script>
+        const blogPosts = [
+            { title: "Introduction: complex traits and macroevolution", file: "fakeblogpost.md", date: "2023-05-01" },
+            // Add more blog post objects here
+        ];
+
+        const converter = new showdown.Converter();
+        const postsPerPage = 5;
+        let currentPage = 1;
+
+        function loadBlogPosts() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postParam = urlParams.get('post');
+            
+            const blogPostsContainer = document.getElementById('blog-posts');
+            blogPostsContainer.innerHTML = '';
+            
+            if (postParam) {
+                const post = blogPosts.find(p => p.file.startsWith(postParam));
+                if (post) {
+                    loadSinglePost(post, blogPostsContainer);
+                }
+            } else {
+                const startIndex = (currentPage - 1) * postsPerPage;
+                const endIndex = startIndex + postsPerPage;
+                const postsToShow = blogPosts.slice(startIndex, endIndex);
+                
+                postsToShow.forEach(post => loadSinglePost(post, blogPostsContainer));
+                
+                displayPagination();
+            }
+        }
+
+        function loadSinglePost(post, container) {
+            fetch(`blog/${post.file}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    const html = converter.makeHtml(markdown);
+                    const postElement = document.createElement('div');
+                    postElement.className = 'blog-post';
+                    postElement.innerHTML = `
+                        <h2>${post.title}</h2>
+                        <p>Published on: ${post.date}</p>
+                        ${html}
+                    `;
+                    container.appendChild(postElement);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error.message);
+                    container.innerHTML += `<p>Error loading post: ${post.title}</p>`;
+                });
+        }
+
+        function displayPagination() {
+            const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+            const paginationContainer = document.createElement('div');
+            paginationContainer.id = 'pagination';
+            
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.onclick = () => {
+                    currentPage = i;
+                    loadBlogPosts();
+                };
+                paginationContainer.appendChild(pageButton);
+            }
+            
+            document.body.appendChild(paginationContainer);
+        }
+
+        function searchPosts() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const blogPostsContainer = document.getElementById('blog-posts');
+            blogPostsContainer.innerHTML = '';
+
+            blogPosts.forEach(post => {
+                if (post.title.toLowerCase().includes(searchTerm)) {
+                    loadSinglePost(post, blogPostsContainer);
+                }
+            });
+        }
+
+        loadBlogPosts();
+    </script>
+</body>
+</html>
