@@ -1,3 +1,11 @@
+---
+title: intro
+author: nic
+date: 9.30.2024
+tags: evolution
+---
+
+
 # the Introduction chapter: Migratory Behavior and other hard-to-model traits 
  
  ""A picture held us captive. And we could not get outside it, for it lay in our language and language seemed to repeat it to us inexorably." Wittgenstein 
