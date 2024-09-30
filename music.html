@@ -4,30 +4,46 @@
     <TITLE>music</TITLE>
     <style>
         body {
-            font-family: Verdana, Arial, sans-serif;
-            background-color: #FFDDAA;
-            color: #333;
+            font-family: 'Courier New', monospace;
+            background-color: #111111;
+            color: #CCCCCC;
         }
         .main {
             width: 800px;
             margin: 0 auto;
         }
         .text {
-            color: #993300;
+            color: #9370DB;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         .text:hover {
-            text-decoration: underline;
+            color: #FFD700;
         }
         .index {
             width: 100%;
         }
         h1 {
-            color: #993300;
+            color: #FFD700;
+            font-size: 2.5em;
+            text-transform: lowercase;
+            letter-spacing: 3px;
+        }
+        h2 {
+            color: #9370DB;
+            border-bottom: 1px solid #9370DB;
+            padding-bottom: 5px;
         }
         .imgS {
             font-style: italic;
-            color: #666699;
+            color: #888888;
+        }
+        img {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        img:hover {
+            filter: grayscale(0%);
         }
     </style>
 </HEAD>
@@ -61,7 +77,7 @@
                     <tr>
                         <td height=450 valign=middle align=right>
                             <p class="imgS">
-                                <span style="font-family:Verdana; font-size:12px; font-style:italic; color:#666699;">
+                                <span style="font-family:'Courier New', monospace; font-size:12px; font-style:italic; color:#888888;">
                                     
                                 </span>
                             </p>
@@ -71,7 +87,7 @@
                         <td height=50 valign=top>
                             <p class="imgS"><a class="text" href="index.html"><IMG SRC="" WIDTH=48 HEIGHT=48 BORDER=0></A></p>
                             <br>
-                            <p><span style="font-family:Verdana; font-size:12px; color:#999999;">&copy;2023 Nic Bone</span></p>
+                            <p><span style="font-family:'Courier New', monospace; font-size:12px; color:#666666;">&copy;2023 Nic Bone</span></p>
                         </td>
                     </tr>
                 </table>
@@ -81,15 +97,13 @@
             <td colspan=5 height=80>&#160;</td>
         </tr>
     </TABLE>
-
     <div id="my-music">
         <h2>my stuff</h2>
         <!-- Add YouTube embeds or links to your music here -->
     </div>
-
     <div id="top-albums">
         <h2>top albums</h2>
-        <p>Check out my <a href="top-albums.html">Top Albums</a> page, generated using Spotify data</p>
+        <p>Check out my <a href="top-albums.html" class="text">Top Albums</a> page, generated using Spotify data</p>
     </div>
 </BODY>
 </HTML>
