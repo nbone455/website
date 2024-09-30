@@ -1,126 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>interesting things</title>
-  <style>
-    body {
-      background-color: #ffffff; /* white background */
-      color: #000000;  /* black text color */
-      font-family: Arial, sans-serif; /* Modern font */
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      color: #000000; /* black  */
-    }
-    
-    p {
-      font-size: 20px;
-    }
-    
-    a {
-      color: #0047AB;  /* blue link color */
-    }
-
-    nav {
-      background-color: #f2f2f2;
-      padding: 10px;
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-      margin-right: 10px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #000000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Interesting Things - Nic Jordan Bone</title>
+    <style>
+        body {
+            background-color: #FFDDAA;
+            color: #003300;
+            font-family: Geneva, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #FFDDAA;
+        }
+        .left-column {
+            width: 200px;
+            float: left;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 580px;
+            float: right;
+        }
+        h1, h2 {
+            color: #993300;
+        }
+        a {
+            color: #993300;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav li {
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #993300;
+            padding: 10px;
+            background-color: #FFE8C4;
+        }
+        .section h2 {
+            background-color: #993300;
+            color: #FFDDAA;
+            padding: 5px;
+            margin-top: 0;
+        }
+        .section ul {
+            list-style-type: square;
+            color: #993300;
+        }
+        .section ul li span {
+            color: #003300;
+        }
+        .disclaimer {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="interesting.html">Interesting Things</a></li>
-    </ul>
-  </nav>
-  
-    <h1></h1>
-    Inclusion isn't indictative of supporting/believing/trusting everything in the link -- discretion is advised 
-  <br>
-  
-    <section>
-        <h2>Research / general scientific stuff</h2>
-        <ul>
-            <li><a href="https://www.sacnas.org/" target="_blank">SACNAS -- Society for the Advancement of Chicanos/Hispanics and Native Americans in Science</a> </li>
-            <li><a href="https://newscience.org/" target="_blank">New Science organization</a> - funds basic science that might not be worth working on if you are focused on publications / citations.</li>
-            <li><a href="https://www.experiment.foundation/" target="_blank">experiment foundation</a> - place to get "challenge grants", similar ethos to New Science.</li>
-            <li><a href="https://www.theseedsofscience.org/" target="_blank">Seeds of Science</a> - alternative avenune for publishing articles (weird ones) </li>
-    
-        </ul>
-    </section>
+    <div class="container">
+        <div class="left-column">
+            <h1>Interesting Things</h1>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="interesting.html">Interesting Things</a></li>
+            </ul>
 
-  
-    <section>
-        <h2>Biology, Evolutionary Biology</h2>
-        <ul>
-            <li><a href="https://guzey.com/how-life-sciences-actually-work/" target="_blank"> Alexy Guzey's essay "How the Life Sciences Work" </a> -  </li>
-            <li><a href="https://felsenst.github.io/" target="_blank">Joe Felsenstein</a> - A prominent figure in the field of evolutionary biology, good rants.</li>
-            <li><a href="https://mobot.org/mobot/research/apweb/" target="_blank"> Peter F. Stevens' angiosperm phylogeny </a> - has great warning to readers: "All clades are hypotheses of relationships, and as hypotheses they may be overturned" .</li>
-              
-        </ul>
-    </section>
+        </div>
+        <div class="right-column">
+            <p class="disclaimer">Inclusion isn't indicative of supporting/believing/trusting everything in the link -- discretion is advised</p>
+            
+            <div class="section">
+                <h2>Research / general scientific stuff</h2>
+                <ul>
+                    <li><span><a href="https://www.sacnas.org/" target="_blank">SACNAS</a> -- Society for the Advancement of Chicanos/Hispanics and Native Americans in Science</span></li>
+                    <li><span><a href="https://newscience.org/" target="_blank">New Science organization</a> - funds basic science that might not be worth working on if you are focused on publications / citations.</span></li>
+                    <li><span><a href="https://www.experiment.foundation/" target="_blank">experiment foundation</a> - place to get "challenge grants", similar ethos to New Science.</span></li>
+                    <li><span><a href="https://www.theseedsofscience.org/" target="_blank">Seeds of Science</a> - alternative avenue for publishing articles (weird ones)</span></li>
+                </ul>
+            </div>
 
-    <section>
-        <h2>Music / sampling / music creation</h2>
-          I spend a lot of time making, listening to and thinking about music. 
-        <ul>
-            <li><a href="https://www.youtube.com/c/TerminalPassage" target="_blank">Terminal Passage</a> - Youtube channel compiling 'rare grooves', lots of jazz, prog, fusion.</li>
-            <li><a href="https://www.youtube.com/channel/UCgbtObeRgXF4loR5gpZERfQ" target="_blank">Gospel Nostalgia</a> - Youtube channel compiling vintage, often rare Gospel music.</li>
-            <li><a href="https://www.youtube.com/@professorskye" target="_blank">Prof. Skye Music Reviews</a> - 'always positive' new music review channel run by a French professor, based on countering the tendency of 'mid-20s music death' (the fact you think new music sucks once you turn roughly 25.)</li>
-        </ul>
-    </section>
+            <div class="section">
+                <h2>Biology, Evolutionary Biology</h2>
+                <ul>
+                    <li><span><a href="https://guzey.com/how-life-sciences-actually-work/" target="_blank">Alexy Guzey's essay "How the Life Sciences Work"</a></span></li>
+                    <li><span><a href="https://felsenst.github.io/" target="_blank">Joe Felsenstein</a> - A prominent figure in the field of evolutionary biology, good rants.</span></li>
+                    <li><span><a href="https://mobot.org/mobot/research/apweb/" target="_blank">Peter F. Stevens' angiosperm phylogeny</a> - has great warning to readers: "All clades are hypotheses of relationships, and as hypotheses they may be overturned".</span></li>
+                </ul>
+            </div>
 
-     <section>
-        <h2>History / Philosophy</h2>
-        <ul>
-            <li><a href="https://meaningness.com/" target="_blank">David Chapman's 'Meaningness'  </a> - book, blog, thing?</li>
-            <li><a href="http://robert-lafleur.blogspot.com/" target="_blank">Robert LaFleur (Beloit college anthro/history professor)</a> blog discusses historical and anthropological topics, like similarities between East Asian poetry and American country songs <a href="http://robert-lafleur.blogspot.com/search/label/Hurtin%27-Leavin%27-Longin%27" target="_blank">here</a>.
-</li>
+            <div class="section">
+                <h2>Music / sampling / music creation</h2>
+                <p>I spend a lot of time making, listening to and thinking about music.</p>
+                <ul>
+                    <li><span><a href="https://www.youtube.com/c/TerminalPassage" target="_blank">Terminal Passage</a> - Youtube channel compiling 'rare grooves', lots of jazz, prog, fusion.</span></li>
+                    <li><span><a href="https://www.youtube.com/channel/UCgbtObeRgXF4loR5gpZERfQ" target="_blank">Gospel Nostalgia</a> - Youtube channel compiling vintage, often rare Gospel music.</span></li>
+                    <li><span><a href="https://www.youtube.com/@professorskye" target="_blank">Prof. Skye Music Reviews</a> - 'always positive' new music review channel run by a French professor, based on countering the tendency of 'mid-20s music death' (the fact you think new music sucks once you turn roughly 25.)</span></li>
+                </ul>
+            </div>
 
-          
+            <div class="section">
+                <h2>History / Philosophy</h2>
+                <ul>
+                    <li><span><a href="https://meaningness.com/" target="_blank">David Chapman's 'Meaningness'</a> - book, blog, thing?</span></li>
+                    <li><span><a href="http://robert-lafleur.blogspot.com/" target="_blank">Robert LaFleur (Beloit college anthro/history professor)</a> blog discusses historical and anthropological topics, like similarities between East Asian poetry and American country songs <a href="http://robert-lafleur.blogspot.com/search/label/Hurtin%27-Leavin%27-Longin%27" target="_blank">here</a>.</span></li>
+                </ul>
+            </div>
 
-          
-        </ul>
-    </section>
+            <div class="section">
+                <h2>Misc.</h2>
+                <ul>
+                    <li><span><a href="https://www.dharmaoverground.org/" target="_blank">dharmaoverground</a> - extremely ... hardcore? meditation forum</span></li>
+                    <li><span><a href="https://wikidata-todo.toolforge.org/wikiflix/#/">wikiflix</a> - public domain movies</span></li>
+                </ul>
+            </div>
 
-
-    <section>
-        <h2>Misc.</h2>
-        <ul>
-           
-           <li><a href="https://www.dharmaoverground.org/" target="_blank"> dharmaoverground </a> - extremely ... hardcore? meditation forum</li>
-           <li><a href="https://wikidata-todo.toolforge.org/wikiflix/#/"> wikiflix</a> - public domain movies  </li>
-          
-
-        </ul>
-    </section>
-
-  
-    <section>
-        <h2>Blacksburg, VA</h2>
-        <ul>
-            <li><a href="https://www.arcgis.com/apps/instant/minimalist/index.html?appid=4e2c47d5444a4f349166007af8e0b8ed" target="_blank">Town of Blacksburg park and trail maps</a> - </li>
-            <li><a href="https://16blocksmagazine.space/" target="_blank">16blocks</a> - indie art and culture magazine</li>
-
-        </ul>
-    </section>
-  
-
-
+            <div class="section">
+                <h2>Blacksburg, VA</h2>
+                <ul>
+                    <li><span><a href="https://www.arcgis.com/apps/instant/minimalist/index.html?appid=4e2c47d5444a4f349166007af8e0b8ed" target="_blank">Town of Blacksburg park and trail maps</a></span></li>
+                    <li><span><a href="https://16blocksmagazine.space/" target="_blank">16blocks</a> - indie art and culture magazine</span></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
