@@ -1,109 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<HEAD>
-    <TITLE>music</TITLE>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music</title>
     <style>
         body {
             font-family: 'Courier New', monospace;
-            background-color: #111111;
-            color: #CCCCCC;
+            background-color: #1a2f1a;  /* Dark green background */
+            color: #e0e0e0;  /* Light gray text */
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
-        .main {
-            width: 800px;
+        .container {
+            max-width: 800px;
             margin: 0 auto;
         }
-        .text {
-            color: #9370DB;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .text:hover {
-            color: #FFD700;
-        }
-        .index {
-            width: 100%;
-        }
         h1 {
-            color: #FFD700;
-            font-size: 2.5em;
-            text-transform: lowercase;
-            letter-spacing: 3px;
+            color: #90EE90;  /* Light green */
+            border-bottom: 1px solid #90EE90;
+            padding-bottom: 10px;
         }
         h2 {
-            color: #9370DB;
-            border-bottom: 1px solid #9370DB;
-            padding-bottom: 5px;
+            color: #90EE90;  /* Light green */
         }
-        .imgS {
-            font-style: italic;
-            color: #888888;
+        a {
+            color: #ADD8E6;  /* Light blue */
+            text-decoration: none;
         }
-        img {
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
+        a:hover {
+            text-decoration: underline;
+            color: #FFFFFF;  /* White on hover */
         }
-        img:hover {
-            filter: grayscale(0%);
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            margin-right: 15px;
+        }
+        .content-section {
+            margin-bottom: 30px;
         }
     </style>
-</HEAD>
-<BODY>
-    <a name="top"></a>
-    <TABLE class="main">
-        <TR>
-            <TD><IMG SRC="space.gif" WIDTH=30 HEIGHT=1></TD>
-            <TD><IMG SRC="space.gif" WIDTH=80 HEIGHT=1></TD>
-            <TD><IMG SRC="space.gif" WIDTH=460 HEIGHT=1></TD>
-            <TD><IMG SRC="space.gif" WIDTH=200 HEIGHT=1></TD>
-            <TD><IMG SRC="space.gif" WIDTH=30 HEIGHT=1></TD>
-        </TR>
-        <TR>
-            <TD COLSPAN=5 HEIGHT=40>&#160;</TD>
-        </TR>
-        <TR>
-            <TD ALIGN=RIGHT VALIGN=MIDDLE COLSPAN=2 height=530>
-                <p><a class="text" href="#my-music">My Music</a></p>
-                <p><a class="text" href="#top-albums">Top Albums</a></p>
-                <p><a class="text" href="#playlists">Playlists</a></p>
-            </TD>
-            <TD ALIGN=CENTER VALIGN=TOP>
-                <img src="" WIDTH=250 HEIGHT=250 BORDER=0 alt="">
-            </TD>
-            <TD colspan=2 class="main">
-                <table class="index">
-                    <tr>
-                        <td height=80 valign=top><h1>music</h1></TD>
-                    </tr>
-                    <tr>
-                        <td height=450 valign=middle align=right>
-                            <p class="imgS">
-                                <span style="font-family:'Courier New', monospace; font-size:12px; font-style:italic; color:#888888;">
-                                    
-                                </span>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=50 valign=top>
-                            <p class="imgS"><a class="text" href="index.html"><IMG SRC="" WIDTH=48 HEIGHT=48 BORDER=0></A></p>
-                            <br>
-                            <p><span style="font-family:'Courier New', monospace; font-size:12px; color:#666666;">&copy;2023 Nic Bone</span></p>
-                        </td>
-                    </tr>
-                </table>
-            </TD>
-        </TR>
-        <tr>
-            <td colspan=5 height=80>&#160;</td>
-        </tr>
-    </TABLE>
-    <div id="my-music">
-        <h2>my stuff</h2>
-        <!-- Add YouTube embeds or links to your music here -->
+</head>
+<body>
+    <div class="container">
+        <h1>music</h1>
+        
+        <div class="nav">
+            <a href="#my-music">My Music</a>
+            <a href="#top-albums">Top Albums</a>
+            <a href="#playlists">Playlists</a>
+        </div>
+
+        <div class="content-section" id="my-music">
+            <h2>my music</h2>
+            <!-- Add your music content here -->
+        </div>
+
+        <div class="content-section" id="top-albums">
+            <h2>top albums</h2>
+            <p>Check out my <a href="top-albums.html">Top Albums</a> list, generated from my Spotify data.</p>
+        </div>
+
+        <div class="content-section" id="playlists">
+        <h2>playlists</h2>
+        <p>A selection of playlists:</p>
+    
+            <h3>soul / old r&b playlist</h3>
+            <div class="spotify-embed">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/48mXoLqczHBISPasMfc8yL?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>            </div>
+    
+        </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Nic Bone | <a href="index.html">Home</a></p>
+        </footer>
     </div>
-    <div id="top-albums">
-        <h2>top albums</h2>
-        <p>Check out my <a href="top-albums.html" class="text">Top Albums</a> page, generated using Spotify data</p>
-    </div>
-</BODY>
-</HTML>
+</body>
+</html>
