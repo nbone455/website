@@ -2,35 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Research - Nic Jordan Bone</title>
+    <title>Research - Nic Bone</title>
     <style>
         body {
-            background-color: #FFDDAA;
-            color: #003300;
+            background-color: #d1edcd;
+            color: #000000;
             font-family: Geneva, Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         .container {
-            width: 800px;
+            width: 1000px;
             margin: 0 auto;
             background-color: #FFDDAA;
+            position: relative;
         }
         .left-column {
-            width: 300px;
+            width: 200px;
             float: left;
             text-align: right;
             padding-right: 20px;
         }
         .right-column {
-            width: 480px;
+            width: 780px;
             float: right;
         }
-        h1, h2, h3 {
-            color: #993300;
+        .project-image {
+            float: left;
+            width: 250px; /* Adjust as needed */
+            height: auto;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        .research-section {
+            margin-bottom: 30px;
+            overflow: hidden; /* Clear the float */
+        }
+        .research-content {
+            overflow: hidden; /* Prevent content from wrapping under the image */
+        }
+        h1, h2 {
+            color: #094351;
+        }
+        h3 {
+            font-size: 1.3em; /* Adjust this value as needed */
+            margin-top: 15px; /* Add some top margin for spacing */
+            margin-bottom: 10px; /* Add some bottom margin for spacing */
+            color: #094351;
         }
         a {
-            color: #993300;
+            color: #cc1515;
             text-decoration: none;
         }
         a:hover {
@@ -66,6 +87,7 @@
         </div>
         <div class="right-column">
             <div class="research-section">
+                <div class="research-content">
                 <h2>General Research Interests</h2>
                 
                 <div class="project">
@@ -81,9 +103,9 @@
 
             <div class="research-section">
                 <h2>PhD Dissertation Projects</h2>
-
                 <div class="project">
                     <h3>Dissertation Overview</h3>
+                    <img src="content/phylo.png" alt="Dissertation" class="project-image">
                     <p>My dissertation explores the intersection of complex traits, methodological approaches in macroevolution, and the evolution of bird migration. It is structured around three key questions:</p>
                     <ol>
                         <li>How effectively do our current methods identify and analyze 'complex' biological traits when simplified into discrete states?</li>
@@ -96,6 +118,8 @@
 
                 <div class="project">
                     <h3>Quantifying Migratory Behavior with eBird</h3>
+                    <img src="content/duck.png" alt="Quantifying Migratory Behavior" class="project-image">
+
                     <p>The study of avian migration presents a distinctive challenge due to the many ways a bird can be considered a 'migrant', most of which are difficult to measure directly. This is a common problem in comparative biology, as many times the traits that researchers are interested in are difficult to wrangle into a simple dataset.</p>
                     <p>Developing effective methods to measure and model these difficult-to-measure axes is essential for understanding the evolution of migration as a trait over long time scales, as well as understanding the relationship between migration and other traits. By analyzing the eBird dataset, this project aims to shed light on the many different ways birds migrate. Whether following predictable patterns or moving in more unpredictable ways, understanding these behaviors can have implications for conservation and ecological studies.</p>
                     <div class="project-links">
@@ -106,6 +130,7 @@
 
                 <div class="project">
                     <h3>Using Hidden States Markov Models to Approximate Continuous Threshold Traits</h3>
+                    <img src="content/markov.png" alt="Hidden States Markov Models" class="project-image">
                     <p>The first part of my dissertation is focused on the efficacy of Structured Hidden Markov Models (SHMMs) in identifying threshold traits - discretized traits with underlying one-dimensional continuous variation. Unlike standard, generalized Hidden Markov models, SHMMs allow us to impose specific structures on the hidden states, representing hypotheses about the underlying architecture of the trait. I used SHMMs to model the evolution of discrete threshold characters, manipulating them to represent the quantitative threshold model. This approach allows us to test whether a discrete trait is best described as a one-dimensional threshold trait, even when only discrete data are available.</p>
                     <p>This method provides a framework for testing explicit hypotheses about trait evolution and validating expert knowledge in character state coding, potentially improving our understanding of complex phenotypic evolution. In no ways am I the first to suggest this methodology, as this work builds off the work of <a href="https://www.tarasovlab.com/">Sergei Tarasov</a>, <a href="https://jamesboyko.com/">James Boyko</a>, and others.</p>
                     <div class="project-links">
