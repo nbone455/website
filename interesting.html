@@ -5,109 +5,116 @@
     <title>Links - Nic Bone</title>
     <style>
         body {
-            background-color: #FFDDAA;
-            color: #003300;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
             font-family: Geneva, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
         .container {
-            width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: #FFDDAA;
+            padding: 20px;
         }
-        .left-column {
-            width: 200px;
-            float: left;
-            text-align: right;
-            padding-right: 20px;
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        .right-column {
-            width: 580px;
-            float: right;
+        h1 {
+            color: #ff6600;
         }
-        h1, h2 {
-            color: #993300;
+        .nav {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .nav li {
+            margin: 0 15px;
         }
         a {
-            color: #993300;
+            color: #ff6600;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        .nav {
+        .disclaimer {
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #cccccc;
+        }
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .link-card {
+            background-color: #2a2a2a;
+            border: 1px solid #ff6600;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.2);
+        }
+        .link-card h2 {
+            color: #ff6600;
+            margin-top: 0;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 10px;
+        }
+        .link-card ul {
             list-style-type: none;
             padding: 0;
         }
-        .nav li {
+        .link-card li {
             margin-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 30px;
-            border: 1px solid #993300;
-            padding: 10px;
-            background-color: #FFE8C4;
-        }
-        .section h2 {
-            background-color: #993300;
-            color: #FFDDAA;
-            padding: 5px;
-            margin-top: 0;
-        }
-        .section ul {
-            list-style-type: square;
-            color: #993300;
-        }
-        .section ul li span {
-            color: #003300;
-        }
-        .disclaimer {
-            font-style: italic;
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-        .counter {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.8em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-column">
-            <h1>Links</h1>
-            <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="interesting.html">Links</a></li>
-            </ul>
+        <header class="header">
+            <h1>Interesting Links</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="interesting.html">Links</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        </div>
-        <div class="right-column">
-            <p class="disclaimer">Inclusion isn't indicative of supporting/believing/trusting everything in the link -- discretion is advised</p>
-            
-            <div class="section">
+        <p class="disclaimer">Inclusion isn't indicative of supporting/believing/trusting everything in the link -- discretion is advised</p>
+
+        <div class="link-grid">
+            <div class="link-card">
                 <h2>Research / general scientific stuff</h2>
                 <ul>
                     <li><span><a href="https://www.sacnas.org/" target="_blank">SACNAS</a> -- Society for the Advancement of Chicanos/Hispanics and Native Americans in Science</span></li>
                     <li><span><a href="https://newscience.org/" target="_blank">New Science organization</a> - funds basic science that might not be worth working on if you are focused on publications / citations.</span></li>
-                    <li><span><a href="https://www.experiment.foundation/" target="_blank">experiment foundation</a> - place to get "challenge grants", similar ethos to New Science.</span></li>
+                        <li><span><a href="https://www.experiment.foundation/" target="_blank">experiment foundation</a> - place to get "challenge grants", similar ethos to New Science.</span></li>
                     <li><span><a href="https://www.theseedsofscience.org/" target="_blank">Seeds of Science</a> - alternative avenue for publishing articles (weird ones)</span></li>
                 </ul>
             </div>
 
-            <div class="section">
+            <div class="link-card">
                 <h2>Biology, Evolutionary Biology</h2>
                 <ul>
+                    <li><span><a href="https://dinosaurpictures.org/ancient-earth#240" target="_blank">Ancient Earth</a> - visualizations useful for understanding Earth's history.</span></li>
                     <li><span><a href="https://guzey.com/how-life-sciences-actually-work/" target="_blank">Alexy Guzey's essay "How the Life Sciences Work"</a></span></li>
                     <li><span><a href="https://felsenst.github.io/" target="_blank">Joe Felsenstein</a> - A prominent figure in the field of evolutionary biology, good rants.</span></li>
-                    <li><span><a href="https://mobot.org/mobot/research/apweb/" target="_blank">Peter F. Stevens' angiosperm phylogeny</a> - has great warning to readers: "All clades are hypotheses of relationships, and as hypotheses they may be overturned".</span></li>
+                    <li><span><a href="https://mobot.org/mobot/research/apweb/" target="_blank">Peter F. Stevens' angiosperm phylogeny</a> - has great warning to readers: "All clades are hypotheses, and as hypotheses they may be overturned".</span></li>
                 </ul>
             </div>
 
-            <div class="section">
+            <div class="link-card">
                 <h2>Music / sampling / music creation</h2>
                 <p>I spend a lot of time making, listening to and thinking about music. </p>
                 <p>Check out my <a href="music.html">music</a> page</p>
@@ -119,27 +126,38 @@
                 </ul>
             </div>
 
-            <div class="section">
+            <div class="link-card">
                 <h2>History / Philosophy</h2>
                 <ul>
                     <li><span><a href="https://meaningness.com/" target="_blank">David Chapman's 'Meaningness'</a> - book, blog, thing?</span></li>
-                    <li><span><a href="http://robert-lafleur.blogspot.com/" target="_blank">Robert LaFleur (Beloit college anthro/history professor)</a> blog discusses historical and anthropological topics, like similarities between East Asian poetry and American country songs <a href="http://robert-lafleur.blogspot.com/search/label/Hurtin%27-Leavin%27-Longin%27" target="_blank">here</a>.</span></li>
+                    <li><span><a href="http://robert-lafleur.blogspot.com/" target="_blank">Robert LaFleur's Round and Square'</a> blog discusses historical and anthropological topics, 
+                        like similarities between East Asian poetry and American country songs <a href="http://robert-lafleur.blogspot.com/search/label/Hurtin%27-Leavin%27-Longin%27" target="_blank">here</a>.</span></li>
+                    <li><span><a href="" target="_blank"></a> - Youtube channel with videos on history, mostly from a British perspective.</span></li>
                 </ul>
             </div>
 
-            <div class="section">
+
+            <div class="link-card">
                 <h2>Misc.</h2>
                 <ul>
+                    <li><span><a href="https://www.xanadu.net/" target="_blank">project Xanadu</a> - a new paradigm for text</span></li>
                     <li><span><a href="https://www.dharmaoverground.org/" target="_blank">dharmaoverground</a> - extremely ... hardcore? meditation forum</span></li>
                     <li><span><a href="https://wikidata-todo.toolforge.org/wikiflix/#/">wikiflix</a> - public domain movies</span></li>
                 </ul>
             </div>
 
-            <div class="section">
+            <div class="link-card">
                 <h2>Blacksburg, VA</h2>
                 <ul>
                     <li><span><a href="https://www.arcgis.com/apps/instant/minimalist/index.html?appid=4e2c47d5444a4f349166007af8e0b8ed" target="_blank">Town of Blacksburg park and trail maps</a></span></li>
                     <li><span><a href="https://16blocksmagazine.space/" target="_blank">16blocks</a> - indie art and culture magazine</span></li>
+                </ul>
+            </div>
+            <div class="link-card">
+                <h2>Personal sites</h2>
+                <ul>
+                    <li><span><a href="https://www.jaronlanier.com/" target="_blank">Jaron Lanier</a> - computer scientist, musician, writer, artist, etc.</span></li>
+                    <li><span><a href="https://virgilabloh.com/free-game/" target="_blank">Virgil Abloh</a> - late fashion designer, artist.</span></li>
                 </ul>
             </div>
             </div>
