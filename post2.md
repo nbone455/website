@@ -1,3 +1,0 @@
-#afagda
-
-bafajga
