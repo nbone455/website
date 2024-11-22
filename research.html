@@ -4,74 +4,178 @@
     <meta charset="UTF-8">
     <title>Research - Nic Bone</title>
     <style>
+        /* Preserving your original color scheme - it's unique and memorable! */
         body {
             background-color: #d1edcd;
             color: #000000;
             font-family: Geneva, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.5;
         }
+        
         .container {
             width: 1000px;
             margin: 0 auto;
             background-color: #FFDDAA;
             position: relative;
+            border: 1px solid #094351;
+            box-shadow: 3px 3px 0 #094351;
+            /* Slight texture for that early-web feel */
+            background-image: linear-gradient(
+                45deg,
+                #FFDDAA 25%,
+                #FFE5BB 25%,
+                #FFE5BB 50%,
+                #FFDDAA 50%,
+                #FFDDAA 75%,
+                #FFE5BB 75%,
+                #FFE5BB 100%
+            );
+            background-size: 40px 40px;
+            background-attachment: fixed;
         }
+
         .left-column {
             width: 200px;
             float: left;
             text-align: right;
-            padding-right: 20px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
         }
+
         .right-column {
-            width: 780px;
+            width: 720px;
             float: right;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 1px solid #094351;
+            min-height: 100vh;
         }
-        .project-image {
-            float: left;
-            width: 250px; /* Adjust as needed */
-            height: auto;
-            margin-right: 5px;
-            margin-top: 5px;
-        }
-        .research-section {
-            margin-bottom: 30px;
-            overflow: hidden; /* Clear the float */
-        }
-        .research-content {
-            overflow: hidden; /* Prevent content from wrapping under the image */
-        }
+
         h1, h2 {
             color: #094351;
+            font-family: Georgia, serif;
         }
+
         h3 {
-            font-size: 1.3em; /* Adjust this value as needed */
-            margin-top: 15px; /* Add some top margin for spacing */
-            margin-bottom: 10px; /* Add some bottom margin for spacing */
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
             color: #094351;
+            border-bottom: 2px dotted #094351;
+            padding-bottom: 5px;
         }
+
         a {
             color: #cc1515;
             text-decoration: none;
+            transition: color 0.2s;
         }
+
         a:hover {
+            color: #094351;
             text-decoration: underline;
         }
+
         .nav {
             list-style-type: none;
             padding: 0;
+            margin-top: 30px;
         }
+
         .nav li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+
+        .nav a {
+            padding: 5px 10px;
+            border: 1px solid #094351;
+            display: inline-block;
+            background: white;
+            box-shadow: 2px 2px 0 #094351;
+            transition: all 0.2s;
+        }
+
+        .nav a:hover {
+            transform: translate(2px, 2px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+
         .research-section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            position: relative;
         }
+
         .project {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #094351;
+            box-shadow: 3px 3px 0 #094351;
         }
+
+        .project-image {
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #094351;
+            padding: 5px;
+            background: white;
+        }
+
         .project-links {
-            margin-top: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #094351;
+        }
+
+        .project-links a {
+            margin-right: 15px;
+        }
+
+        /* Enhancement: Custom bullet points */
+        .project ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .project ul li::before {
+            content: "►";
+            color: #094351;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+
+        /* Enhancement: Highlight boxes */
+        .highlight-box {
+            background: #d1edcd;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #094351;
+            box-shadow: 3px 3px 0 #094351;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media (max-width: 1020px) {
+            .container {
+                width: 95%;
+            }
+            .right-column {
+                width: 70%;
+            }
+            .project-image {
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -87,54 +191,48 @@
         </div>
         <div class="right-column">
             <div class="research-section">
-                <div class="research-content">
-                <h2>General Research Interests</h2>
-                
-                <div class="project">
-                    <h3>Translating Domain Knowledge to Testable Models</h3>
-                    <p>I am interested by the challenge of translating domain expertise into testable statistical frameworks. Especially in biology where the difficult-to-code observational / experimental findings often are left out of the modelling process.</p>
+                <div class="highlight-box">
+                    <h2>General Research Interests</h2>
+                    <div class="project">
+                        <h3>Translating Domain Knowledge to Testable Models</h3>
+                        <p>I am interested by the challenge of translating domain expertise into testable statistical frameworks. Especially in biology where the difficult-to-code observational / experimental findings often are left out of the modelling process.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>History and Future of Evolutionary Biology</h3>
+                        <p>The convergence of past and present contributors in the field, their cultural context, and the resulting assumptions, biases, and inferences that shape evolutionary thinking has always interested me. I believe that fully acknowledging and reconciling this historical legacy with the present is crucial for advancing evolutionary research beyond the field's active justification of systemic racism, eugenics, and discrimination. I hope to eventually expand my interest in this convergence into a more formal research effort.</p>
+                    </div>
                 </div>
-                
-                <div class="project">
-                    <h3>History and Future of Evolutionary Biology</h3>
-                    <p>The convergence of past and present contributors in the field, their cultural context, and the resulting assumptions, biases, and inferences that shape evolutionary thinking has always interested me. I believe that fully acknowledging and reconciling this historical legacy with the present is crucial for advancing evolutionary research beyond the field's active justification of systemic racism, eugenics, and discrimination. I hope to eventually expand my interest in this convergence into a more formal research effort.</p>
-                </div>
-            </div>
 
-            <div class="research-section">
                 <h2>PhD Dissertation Projects</h2>
                 <div class="project">
                     <h3>Dissertation Overview</h3>
                     <img src="content/phylo.png" alt="Dissertation" class="project-image">
                     <p>My dissertation explores the intersection of complex traits, methodological approaches in macroevolution, and the evolution of bird migration. It is structured around three key questions:</p>
-                    <ol>
+                    <ul>
                         <li>How effectively do our current methods identify and analyze 'complex' biological traits when simplified into discrete states?</li>
                         <li>To what extent can migration in birds, as a complex trait known to have many axes of continuous variation, be adequately represented by discrete states?</li>
                         <li>What can we gain by pushing the limits of discrete state analysis in the context of complex traits?</li>
-                    </ol>
-                    <p>Through this research, I hope to contribute to the ongoing dialogue about how best to represent and analyze complex biological traits in the era of big data and advanced statistical methods, using bird migration as a case study.</p>
-                    
+                    </ul>
                 </div>
 
                 <div class="project">
                     <h3>Quantifying Migratory Behavior with eBird</h3>
                     <img src="content/duck.png" alt="Quantifying Migratory Behavior" class="project-image">
-
                     <p>The study of avian migration presents a distinctive challenge due to the many ways a bird can be considered a 'migrant', most of which are difficult to measure directly. This is a common problem in comparative biology, as many times the traits that researchers are interested in are difficult to wrangle into a simple dataset.</p>
-                    <p>Developing effective methods to measure and model these difficult-to-measure axes is essential for understanding the evolution of migration as a trait over long time scales, as well as understanding the relationship between migration and other traits. By analyzing the eBird dataset, this project aims to shed light on the many different ways birds migrate. Whether following predictable patterns or moving in more unpredictable ways, understanding these behaviors can have implications for conservation and ecological studies.</p>
+                    <p>Developing effective methods to measure and model these difficult-to-measure axes is essential for understanding the evolution of migration as a trait over long time scales, as well as understanding the relationship between migration and other traits.</p>
                     <div class="project-links">
-                        <p><a href="BoneIGC_2024.pdf">Poster</a> on this research for the <a href="https://globalchange.vt.edu/graduate/people-of-the-igc/current-fellows/bone-nicholas.html">Interfaces of Global Change</a> symposium.</p>
-                        <p><a href="https://github.com/nbone455/macrofidelity">View associated GitHub repository</a></p>
+                        <a href="BoneIGC_2024.pdf">► IGC Symposium Poster</a>
+                        <a href="https://github.com/nbone455/macrofidelity">► GitHub Repository</a>
                     </div>
                 </div>
 
                 <div class="project">
-                    <h3>Using Hidden States Markov Models to Approximate Continuous Threshold Traits</h3>
+                    <h3>Using Hidden States Markov Models</h3>
                     <img src="content/markov.png" alt="Hidden States Markov Models" class="project-image">
-                    <p>The first part of my dissertation is focused on the efficacy of Structured Hidden Markov Models (SHMMs) in identifying threshold traits - discretized traits with underlying one-dimensional continuous variation. Unlike standard, generalized Hidden Markov models, SHMMs allow us to impose specific structures on the hidden states, representing hypotheses about the underlying architecture of the trait. I used SHMMs to model the evolution of discrete threshold characters, manipulating them to represent the quantitative threshold model. This approach allows us to test whether a discrete trait is best described as a one-dimensional threshold trait, even when only discrete data are available.</p>
-                    <p>This method provides a framework for testing explicit hypotheses about trait evolution and validating expert knowledge in character state coding, potentially improving our understanding of complex phenotypic evolution. In no ways am I the first to suggest this methodology, as this work builds off the work of <a href="https://www.tarasovlab.com/">Sergei Tarasov</a>, <a href="https://jamesboyko.com/">James Boyko</a>, and others.</p>
+                    <p>The first part of my dissertation focuses on the efficacy of Structured Hidden Markov Models (SHMMs) in identifying threshold traits - discretized traits with underlying one-dimensional continuous variation. This approach allows us to test whether a discrete trait is best described as a one-dimensional threshold trait, even when only discrete data are available.</p>
                     <div class="project-links">
-                        <p><a href="https://github.com/nbone455/sHMM-sim/">View associated GitHub repository</a></p>
+                        <a href="https://github.com/nbone455/sHMM-sim/">► View Code Repository</a>
                     </div>
                 </div>
             </div>
