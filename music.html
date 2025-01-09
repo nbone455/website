@@ -5,105 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music</title>
     <style>
+        @keyframes subtle-shift {
+            0% { background-position: 0 0; }
+            100% { background-position: 70px 70px; }
+        }
+
         body {
-            font-family: Geneva, Arial, sans-serif;            
-            background-color: #1a2f1a;
-            color: #e0e0e0;
-            line-height: 1.6;
+            background-color: #330033;
+            background-image: 
+                repeating-linear-gradient(45deg, 
+                    transparent 0, 
+                    transparent 35px, 
+                    rgba(255, 100, 255, 0.05) 35px, 
+                    rgba(255, 100, 255, 0.05) 70px),
+                radial-gradient(circle at 50% 50%, 
+                    rgba(51, 0, 51, 0.9) 0%, 
+                    #330033 100%);
+            color: rgba(255, 204, 255, 0.8);
+            font-family: Times New Roman, serif;
+            line-height: 1.5;
             margin: 0;
             padding: 20px;
+            animation: subtle-shift 20s linear infinite;
         }
+
+        ::selection {
+            background: #FF99FF;
+            color: #330033;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
+            background: rgba(51, 0, 51, 0.8);
+            padding: 40px;
+            border-radius: 1px;
+            backdrop-filter: blur(2px);
         }
+
         h1 {
-            color: #90EE90;
-            border-bottom: 1px solid #90EE90;
-            padding-bottom: 10px;
+            color: rgba(255, 153, 255, 0.9);
+            text-align: right;
+            font-size: 36px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            border-right: 1px solid rgba(255, 153, 255, 0.3);
+            padding-right: 20px;
+            letter-spacing: 5px;
         }
+
         h2 {
-            color: #90EE90;
+            color: rgba(255, 153, 255, 0.8);
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            text-align: right;
+            border-right: 1px solid rgba(255, 153, 255, 0.2);
+            padding-right: 20px;
         }
-        a {
-            color: #ADD8E6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #FFFFFF;
-        }
+
         .nav {
-            margin-bottom: 20px;
+            margin: 30px 0;
+            text-align: right;
+            mix-blend-mode: difference;
         }
+
         .nav a {
-            margin-right: 15px;
+            color: rgba(255, 204, 255, 0.9);
+            text-decoration: none;
+            margin-left: 30px;
+            font-style: normal;
         }
+
+        .nav a:hover {
+            color: #FF99FF;
+        }
+
         .content-section {
-            margin-bottom: 30px;
+            margin: 60px 0;
+            position: relative;
         }
-        .music-project, .playlist-embed {
-            margin-bottom: 30px;
-            border: 1px solid #90EE90;
-            padding: 15px;
-            background-color: #243024;
+
+        .music-project {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(80, 0, 80, 0.2);
+            border-left: 1px solid rgba(255, 153, 255, 0.2);
+            position: relative;
         }
-        .music-project h3, .playlist-embed h3 {
-            color: #ADD8E6;
+
+        .music-project::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, rgba(255, 153, 255, 0.1) 100%);
+            pointer-events: none;
+        }
+
+        .music-project h3 {
+            color: rgba(255, 153, 255, 0.8);
+            font-weight: normal;
             margin-top: 0;
         }
+
+        p {
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: justify;
+            font-weight: lighter;
+            opacity: 0.9;
+        }
+
         .youtube-embed, .spotify-embed {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            margin: 20px 0;
+            opacity: 0.85;
+            border: 1px solid rgba(255, 153, 255, 0.1);
         }
+
         .youtube-embed iframe, .spotify-embed iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            filter: saturate(0.9) hue-rotate(280deg);
+            mix-blend-mode: luminosity;
+        }
+
+        .spotify-embed {
+            padding-bottom: 380px;
+        }
+
+        .spotify-embed iframe {
+            filter: saturate(0.9) hue-rotate(280deg) brightness(0.9);
+        }
+
+       a {
+        color: yellow;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        a:hover {
+          color: #FFFF99; /* slightly lighter yellow for hover */
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 60px;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255, 153, 255, 0.1);
+            padding-top: 20px;
+            mix-blend-mode: difference;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 20px;
+            }
+            h1, h2 {
+                text-align: center;
+                border-right: none;
+                padding-right: 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>music</h1>
+        <h1>m u s i c</h1>
         
         <div class="nav">
-            <a href="#my-music">My Music</a>
-            <a href="#top-albums">Top Albums</a>
-            <a href="#playlists">Playlists</a>
+            <a href="#my-music">my music</a>
+            <a href="#top-albums">top albums</a>
+            <a href="#playlists">playlists</a>
         </div>
 
         <div class="content-section" id="my-music">
             <h2>my music</h2>
-            <p> During the pandemic I tried to learn how to make beats, mainly by making something every day. I now have a Google Drive filled with my progress. 
-                With three years of music, I am treating these one-offs sort of like an audio collage.</p>
+            <p>During the pandemic I tried to learn how to make beats, mainly by making something every day. I now have a Google Drive filled with my progress. With three years of music, I am treating these one-offs sort of like an audio collage.</p>
             
-            <p> Gear: Most of what I make I use a very inexpensive midi controller (AKAI MPK mini), free Audio Workstation software (usually MPC beats) and live instruments / vocals plugged into a audio interface (currently the Volt 2, before that I was using Scarlet Solos which are fairly solid and cheap). One thing I've learned from interacting with other musicians is that I have no "gear-head" tendencies so I can't say much more than this.</p>
+            <p>Gear: Most of what I make I use a very inexpensive midi controller (AKAI MPK mini), free Audio Workstation software (usually MPC beats) and live instruments / vocals plugged into a audio interface (currently the Volt 2, before that I was using Scarlet Solos which are fairly solid and cheap). One thing I've learned from interacting with other musicians is that I have no "gear-head" tendencies so I can't say much more than this.</p>
 
-            
             <div class="music-project">
-
-                 <div class="music-project">
                 <h3>Sample-based beats</h3>
-                <p> The first thing I learned how to do was learn how to sample other songs and turn them into beats. I was motivated by sample-based hip-hop producers like Knxwledge, J Dilla, RZA, Nujabes, Kanye and others as well as collage-ists like the Avalanches. 
-                     I jokingly call this sound "mid-fi beats to walk to" cause I never quite have been able to mimic the "lo-fi beats for studying" sound and they sure aren't hi-fi.</p>
+                <p>The first thing I learned how to do was learn how to sample other songs and turn them into beats. I was motivated by sample-based hip-hop producers like Knxwledge, J Dilla, RZA, Nujabes, Kanye and others as well as collage-ists like the Avalanches. I jokingly call this sound "mid-fi beats to walk to" cause I never quite have been able to mimic the "lo-fi beats for studying" sound and they sure aren't hi-fi.</p>
                 <div class="youtube-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=o8K7X5F3Rzg8BzzU&amp;list=PLbhmEcGrvw9UAvovunsQ2HnyhICqW_Qay" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=o8K7X5F3Rzg8BzzU&list=PLbhmEcGrvw9UAvovunsQ2HnyhICqW_Qay" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
 
-                
+            <div class="music-project">
                 <h3>Synth stuff</h3>
                 <p>I wanted to learn how to make synth music like Mort Garson or Rei Harakami, I haven't really figured it out yet but its fun</p>
                 <div class="youtube-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uynjQOj2RMbANUca&amp;list=PLbhmEcGrvw9WKm5wNvOWlSj4hW32N6pBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uynjQOj2RMbANUca&list=PLbhmEcGrvw9WKm5wNvOWlSj4hW32N6pBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
-
-           
-            <!-- Add more music projects as needed -->
         </div>
 
         <div class="content-section" id="top-albums">
@@ -115,14 +222,14 @@
             <h2>playlists</h2>
             <p>A selection of playlists:</p>
     
-            <div class="playlist-embed">
+            <div class="music-project">
                 <h3>soul / old r&b playlist</h3>
                 <div class="spotify-embed">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/48mXoLqczHBISPasMfc8yL?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
 
-            <div class="playlist-embed">
+            <div class="music-project">
                 <h3>funk/disco adaptive radiation playlist</h3>
                 <div class="spotify-embed">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2W59sfDNe71ffZ1vip7MXR?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -131,7 +238,7 @@
         </div>
 
         <footer>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Nic Bone | <a href="index.html">Home</a></p>
+            <a href="index.html">return</a>
         </footer>
     </div>
 </body>
