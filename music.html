@@ -5,119 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music</title>
     <style>
-        @keyframes subtle-shift {
-            0% { background-position: 0 0; }
-            100% { background-position: 70px 70px; }
-        }
-
         body {
-            background-color: #330033;
-            background-image: 
-                repeating-linear-gradient(45deg, 
-                    transparent 0, 
-                    transparent 35px, 
-                    rgba(255, 100, 255, 0.05) 35px, 
-                    rgba(255, 100, 255, 0.05) 70px),
-                radial-gradient(circle at 50% 50%, 
-                    rgba(51, 0, 51, 0.9) 0%, 
-                    #330033 100%);
-            color: rgba(255, 204, 255, 0.8);
-            font-family: Times New Roman, serif;
-            line-height: 1.5;
+            font-family: 'Courier New', monospace;
+            background-color: #1a2f1a;
+            color: #e0e0e0;
             margin: 0;
             padding: 20px;
-            animation: subtle-shift 20s linear infinite;
-        }
-
-        ::selection {
-            background: #FF99FF;
-            color: #330033;
         }
 
         .container {
-            max-width: 800px;
+            width: 800px;
             margin: 0 auto;
-            background: rgba(51, 0, 51, 0.8);
-            padding: 40px;
-            border-radius: 1px;
-            backdrop-filter: blur(2px);
+            background-color: #243024;
+            border: 1px solid #90EE90;
+            padding: 20px;
         }
 
         h1 {
-            color: rgba(255, 153, 255, 0.9);
-            text-align: right;
-            font-size: 36px;
-            font-weight: normal;
-            margin-bottom: 40px;
-            border-right: 1px solid rgba(255, 153, 255, 0.3);
-            padding-right: 20px;
-            letter-spacing: 5px;
+            color: #90EE90;
+            text-align: center;
+            border-bottom: 2px dashed #90EE90;
+            padding-bottom: 10px;
         }
 
         h2 {
-            color: rgba(255, 153, 255, 0.8);
-            font-size: 18px;
-            font-weight: normal;
-            letter-spacing: 2px;
-            margin-top: 40px;
-            text-align: right;
-            border-right: 1px solid rgba(255, 153, 255, 0.2);
-            padding-right: 20px;
+            color: #90EE90;
+            border-bottom: 1px solid #90EE90;
+            padding-bottom: 5px;
         }
 
         .nav {
-            margin: 30px 0;
-            text-align: right;
-            mix-blend-mode: difference;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #90EE90;
         }
 
         .nav a {
-            color: rgba(255, 204, 255, 0.9);
+            color: #ADD8E6;
             text-decoration: none;
-            margin-left: 30px;
-            font-style: normal;
+            margin: 0 15px;
         }
 
         .nav a:hover {
-            color: #FF99FF;
+            text-decoration: underline;
+            color: #FFFFFF;
         }
 
         .content-section {
-            margin: 60px 0;
-            position: relative;
+            margin: 30px 0;
         }
 
         .music-project {
-            margin: 40px 0;
-            padding: 20px;
-            background: rgba(80, 0, 80, 0.2);
-            border-left: 1px solid rgba(255, 153, 255, 0.2);
-            position: relative;
-        }
-
-        .music-project::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 0%, rgba(255, 153, 255, 0.1) 100%);
-            pointer-events: none;
+            margin-bottom: 20px;
+            border: 1px solid #90EE90;
+            padding: 10px;
+            background-color: #1a2f1a;
         }
 
         .music-project h3 {
-            color: rgba(255, 153, 255, 0.8);
-            font-weight: normal;
+            color: #90EE90;
             margin-top: 0;
+            border-bottom: 1px dashed #90EE90;
+            padding-bottom: 5px;
         }
 
         p {
-            font-size: 14px;
-            line-height: 1.8;
-            text-align: justify;
-            font-weight: lighter;
-            opacity: 0.9;
+            margin: 5px 0;
+            line-height: 1.6;
         }
 
         .youtube-embed, .spotify-embed {
@@ -126,8 +81,7 @@
             height: 0;
             overflow: hidden;
             margin: 20px 0;
-            opacity: 0.85;
-            border: 1px solid rgba(255, 153, 255, 0.1);
+            border: 2px solid #90EE90;
         }
 
         .youtube-embed iframe, .spotify-embed iframe {
@@ -136,62 +90,51 @@
             left: 0;
             width: 100%;
             height: 100%;
-            filter: saturate(0.9) hue-rotate(280deg);
-            mix-blend-mode: luminosity;
         }
 
         .spotify-embed {
             padding-bottom: 380px;
         }
 
-        .spotify-embed iframe {
-            filter: saturate(0.9) hue-rotate(280deg) brightness(0.9);
-        }
-
-       a {
-        color: yellow;
-        text-decoration: none;
-        font-weight: bold;
+        a {
+            color: #ADD8E6;
+            text-decoration: none;
         }
 
         a:hover {
-          color: #FFFF99; /* slightly lighter yellow for hover */
+            text-decoration: underline;
+            color: #FFFFFF;
         }
 
         footer {
             text-align: center;
-            font-size: 12px;
-            margin-top: 60px;
-            opacity: 0.7;
-            border-top: 1px solid rgba(255, 153, 255, 0.1);
-            padding-top: 20px;
-            mix-blend-mode: difference;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #ADD8E6;
+            border-top: 1px solid #90EE90;
+            padding-top: 10px;
         }
 
         @media (max-width: 800px) {
             .container {
-                padding: 20px;
-            }
-            h1, h2 {
-                text-align: center;
-                border-right: none;
-                padding-right: 0;
+                width: auto;
+                margin: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>m u s i c</h1>
+        <h1>MUSIC</h1>
         
         <div class="nav">
-            <a href="#my-music">my music</a>
-            <a href="#top-albums">top albums</a>
-            <a href="#playlists">playlists</a>
+            <a href="#my-music">MY MUSIC</a>
+            <a href="#top-albums">TOP ALBUMS</a>
+            <a href="#playlists">PLAYLISTS</a>
         </div>
 
         <div class="content-section" id="my-music">
-            <h2>my music</h2>
+            <h2>MY MUSIC</h2>
             <p>During the pandemic I tried to learn how to make beats, mainly by making something every day. I now have a Google Drive filled with my progress. With three years of music, I am treating these one-offs sort of like an audio collage.</p>
             
             <p>Gear: Most of what I make I use a very inexpensive midi controller (AKAI MPK mini), free Audio Workstation software (usually MPC beats) and live instruments / vocals plugged into a audio interface (currently the Volt 2, before that I was using Scarlet Solos which are fairly solid and cheap). One thing I've learned from interacting with other musicians is that I have no "gear-head" tendencies so I can't say much more than this.</p>
@@ -214,12 +157,12 @@
         </div>
 
         <div class="content-section" id="top-albums">
-            <h2>top albums</h2>
+            <h2>TOP ALBUMS</h2>
             <p>my <a href="top-albums.html">Top Albums</a> list, generated from my Spotify data.</p>
         </div>
 
         <div class="content-section" id="playlists">
-            <h2>playlists</h2>
+            <h2>PLAYLISTS</h2>
             <p>A selection of playlists:</p>
     
             <div class="music-project">
