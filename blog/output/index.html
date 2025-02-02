@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Index</title>
+    <style>
+        body {
+            background-color: #FBFDFA;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            font-family: Verdana, sans-serif;
+        }
+
+        .container {
+            width: 800px;
+            background-color: #FCFEFB;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Verdana, sans-serif;
+        }
+
+        /* Filter controls */
+        .filters {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .topic-button {
+            background: #FCFEFB;
+            border: 1px solid #CC6600;
+            color: #CC6600;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: Verdana, sans-serif;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .topic-button.active {
+            background: #CC6600;
+            color: white;
+        }
+
+        .sort-controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Posts list */
+        .posts-list {
+            margin-top: 30px;
+        }
+
+        .post-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-date {
+            color: #CC6600;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .post-title {
+            margin: 5px 0;
+        }
+
+        .post-title a {
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            text-decoration: underline;
+        }
+
+        .post-topics {
+            margin-top: 5px;
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 10px;
+            font-size: 11px;
+        }
+
+        .nav {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .nav a {
+            font-family: Verdana, sans-serif;
+            font-size: 12px;
+            color: #CC6600;
+            line-height: 100%;
+            font-style: italic;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const postsList = document.querySelector('.posts-list');
+            const posts = Array.from(document.querySelectorAll('.post-item'));
+            const topicButtons = document.querySelectorAll('.topic-button');
+            let activeTopics = new Set();
+
+            // Topic filtering
+            topicButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const topic = button.dataset.topic;
+                    button.classList.toggle('active');
+                    
+                    if (button.classList.contains('active')) {
+                        activeTopics.add(topic);
+                    } else {
+                        activeTopics.delete(topic);
+                    }
+                    
+                    filterPosts();
+                });
+            });
+
+            // Sort by date
+            document.getElementById('sort-date').addEventListener('click', () => {
+                const sorted = Array.from(posts).sort((a, b) => {
+                    return new Date(b.dataset.date) - new Date(a.dataset.date);
+                });
+                updatePostsList(sorted);
+            });
+
+            function filterPosts() {
+                let visiblePosts = posts;
+                
+                if (activeTopics.size > 0) {
+                    visiblePosts = posts.filter(post => {
+                        const postTopics = post.dataset.topics.split(',');
+                        return Array.from(activeTopics).some(topic => postTopics.includes(topic));
+                    });
+                }
+                
+                updatePostsList(visiblePosts);
+            }
+
+            function updatePostsList(visiblePosts) {
+                postsList.innerHTML = '';
+                visiblePosts.forEach(post => postsList.appendChild(post.cloneNode(true)));
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Posts</h1>
+        
+        <div class="filters">
+            <h3>Filter by Topic</h3>
+            <button class="topic-button" data-topic="culture">culture</button>
+<button class="topic-button" data-topic="history">history</button>
+<button class="topic-button" data-topic="music">music</button>
+        </div>
+
+        <div class="sort-controls">
+            <button id="sort-date" class="topic-button">Sort by Date</button>
+        </div>
+
+        <div class="posts-list">
+            
+        <div class="post-item" data-date="2025-01-05" data-topics="music,culture,history">
+            <div class="post-date">January 05, 2025</div>
+            <div class="post-title">
+                <a href="folk-music.html">What is Folk Music?</a>
+            </div>
+            <div class="post-topics">
+                <span class="topic-tag">music</span> <span class="topic-tag">culture</span> <span class="topic-tag">history</span>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="nav">
+            <a href="index.html">← Home</a>
+        </div>
+    </div>
+</body>
+</html>
