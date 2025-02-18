@@ -6,58 +6,84 @@
     <title>music</title>
     <style>
         body {
-            font-family: Geneva, Arial, sans-serif;            
+            font-family: 'Courier New', monospace;
             background-color: #1a2f1a;
             color: #e0e0e0;
-            line-height: 1.6;
             margin: 0;
             padding: 20px;
         }
+
         .container {
-            max-width: 800px;
+            width: 800px;
             margin: 0 auto;
+            background-color: #243024;
+            border: 1px solid #90EE90;
+            padding: 20px;
         }
+
         h1 {
             color: #90EE90;
-            border-bottom: 1px solid #90EE90;
+            text-align: center;
+            border-bottom: 2px dashed #90EE90;
             padding-bottom: 10px;
         }
+
         h2 {
             color: #90EE90;
+            border-bottom: 1px solid #90EE90;
+            padding-bottom: 5px;
         }
-        a {
+
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #90EE90;
+        }
+
+        .nav a {
             color: #ADD8E6;
             text-decoration: none;
+            margin: 0 15px;
         }
-        a:hover {
+
+        .nav a:hover {
             text-decoration: underline;
             color: #FFFFFF;
         }
-        .nav {
-            margin-bottom: 20px;
-        }
-        .nav a {
-            margin-right: 15px;
-        }
+
         .content-section {
-            margin-bottom: 30px;
+            margin: 30px 0;
         }
-        .music-project, .playlist-embed {
-            margin-bottom: 30px;
+
+        .music-project {
+            margin-bottom: 20px;
             border: 1px solid #90EE90;
-            padding: 15px;
-            background-color: #243024;
+            padding: 10px;
+            background-color: #1a2f1a;
         }
-        .music-project h3, .playlist-embed h3 {
-            color: #ADD8E6;
+
+        .music-project h3 {
+            color: #90EE90;
             margin-top: 0;
+            border-bottom: 1px dashed #90EE90;
+            padding-bottom: 5px;
         }
+
+        p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
         .youtube-embed, .spotify-embed {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            margin: 20px 0;
+            border: 2px solid #90EE90;
         }
+
         .youtube-embed iframe, .spotify-embed iframe {
             position: absolute;
             top: 0;
@@ -65,64 +91,88 @@
             width: 100%;
             height: 100%;
         }
+
+        .spotify-embed {
+            padding-bottom: 380px;
+        }
+
+        a {
+            color: #ADD8E6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #FFFFFF;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #ADD8E6;
+            border-top: 1px solid #90EE90;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: auto;
+                margin: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>music</h1>
+        <h1>MUSIC</h1>
         
         <div class="nav">
-            <a href="#my-music">My Music</a>
-            <a href="#top-albums">Top Albums</a>
-            <a href="#playlists">Playlists</a>
+            <a href="#my-music">MY MUSIC</a>
+            <a href="#top-albums">TOP ALBUMS</a>
+            <a href="#playlists">PLAYLISTS</a>
         </div>
 
         <div class="content-section" id="my-music">
-            <h2>my music</h2>
-            <p> During the pandemic I tried to learn how to make beats, mainly by making something every day. I now have a Google Drive filled with my progress. 
-                With three years of music, I am treating these one-offs sort of like an audio collage.</p>
+            <h2>MY MUSIC</h2>
+            <p>During the pandemic I tried to learn how to make beats, mainly by making something every day. I now have a Google Drive filled with my progress. With three years of music, I am treating these one-offs sort of like an audio collage.</p>
             
-            <p> Gear: Most of what I make I use a very inexpensive midi controller (AKAI MPK mini), free Audio Workstation software (usually MPC beats) and live instruments / vocals plugged into a audio interface (currently the Volt 2, before that I was using Scarlet Solos which are fairly solid and cheap). One thing I've learned from interacting with other musicians is that I have no "gear-head" tendencies so I can't say much more than this.</p>
+            <p>Gear: Most of what I make I use a very inexpensive midi controller (AKAI MPK mini), free Audio Workstation software (usually MPC beats) and live instruments / vocals plugged into a audio interface (currently the Volt 2, before that I was using Scarlet Solos which are fairly solid and cheap). One thing I've learned from interacting with other musicians is that I have no "gear-head" tendencies so I can't say much more than this.</p>
 
-            
             <div class="music-project">
-
-                 <div class="music-project">
                 <h3>Sample-based beats</h3>
-                <p> The first thing I learned how to do was learn how to sample other songs and turn them into beats. I was motivated by sample-based hip-hop producers like Knxwledge, J Dilla, RZA, Nujabes, Kanye and others as well as collage-ists like the Avalanches. 
-                     I jokingly call this sound "mid-fi beats to walk to" cause I never quite have been able to mimic the "lo-fi beats for studying" sound and they sure aren't hi-fi.</p>
+                <p>The first thing I learned how to do was learn how to sample other songs and turn them into beats. I was motivated by sample-based hip-hop producers like Knxwledge, J Dilla, RZA, Nujabes, Kanye and others as well as collage-ists like the Avalanches. I jokingly call this sound "mid-fi beats to walk to" cause I never quite have been able to mimic the "lo-fi beats for studying" sound and they sure aren't hi-fi.</p>
                 <div class="youtube-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=o8K7X5F3Rzg8BzzU&amp;list=PLbhmEcGrvw9UAvovunsQ2HnyhICqW_Qay" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=o8K7X5F3Rzg8BzzU&list=PLbhmEcGrvw9UAvovunsQ2HnyhICqW_Qay" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
 
-                
+            <div class="music-project">
                 <h3>Synth stuff</h3>
                 <p>I wanted to learn how to make synth music like Mort Garson or Rei Harakami, I haven't really figured it out yet but its fun</p>
                 <div class="youtube-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uynjQOj2RMbANUca&amp;list=PLbhmEcGrvw9WKm5wNvOWlSj4hW32N6pBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uynjQOj2RMbANUca&list=PLbhmEcGrvw9WKm5wNvOWlSj4hW32N6pBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
-
-           
-            <!-- Add more music projects as needed -->
         </div>
 
         <div class="content-section" id="top-albums">
-            <h2>top albums</h2>
+            <h2>TOP ALBUMS</h2>
             <p>my <a href="top-albums.html">Top Albums</a> list, generated from my Spotify data.</p>
         </div>
 
         <div class="content-section" id="playlists">
-            <h2>playlists</h2>
+            <h2>PLAYLISTS</h2>
             <p>A selection of playlists:</p>
     
-            <div class="playlist-embed">
+            <div class="music-project">
                 <h3>soul / old r&b playlist</h3>
                 <div class="spotify-embed">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/48mXoLqczHBISPasMfc8yL?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
 
-            <div class="playlist-embed">
+            <div class="music-project">
                 <h3>funk/disco adaptive radiation playlist</h3>
                 <div class="spotify-embed">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2W59sfDNe71ffZ1vip7MXR?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -131,7 +181,7 @@
         </div>
 
         <footer>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Nic Bone | <a href="index.html">Home</a></p>
+            <a href="index.html">return</a>
         </footer>
     </div>
 </body>

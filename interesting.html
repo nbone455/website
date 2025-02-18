@@ -5,38 +5,45 @@
     <title>Links - Nic Bone</title>
     <style>
         body {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            font-family: Geneva, Arial, sans-serif;
+            background-color: #f7d891;
+            color: #333333;
+            font-family: Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 180%;
         }
         .container {
-            max-width: 1200px;
+            width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #FCFEFB;
         }
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
         h1 {
-            color: #ff6600;
+            color: #333333;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Verdana, sans-serif;
         }
         .nav {
-            display: flex;
-            justify-content: center;
             list-style-type: none;
             padding: 0;
             margin-bottom: 30px;
+            text-align: center;
         }
         .nav li {
+            display: inline;
             margin: 0 15px;
         }
         a {
-            color: #ff6600;
+            color: #003cf9;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
         }
         a:hover {
             text-decoration: underline;
@@ -45,36 +52,46 @@
             font-style: italic;
             text-align: center;
             margin-bottom: 30px;
-            color: #cccccc;
+            color: #666666;
+            font-size: 12px;
         }
         .link-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
         .link-card {
-            background-color: #2a2a2a;
-            border: 1px solid #ff6600;
-            border-radius: 8px;
+            background-color: #FCFEFB;
+            border: 1px solid #ddd;
+            border-radius: 4px;
             padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.2);
         }
         .link-card h2 {
-            color: #ff6600;
-            margin-top: 0;
-            border-bottom: 2px solid #ff6600;
+            color: #AA4411;
+            font-size: 14px;
+            margin-top: 30px;
+            font-weight: bold;
+            font-style: italic;
+            font-family: Verdana, sans-serif;
+            border-bottom: 1px solid #eee;
             padding-bottom: 10px;
+            margin-top: 0;
         }
         .link-card ul {
             list-style-type: none;
             padding: 0;
         }
         .link-card li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 150%;
+        }
+        .link-card p {
+            font-size: 14px;
+            color: #333333;
+            line-height: 180%;
+        }
+        .link-card span {
+            font-size: 13px;
         }
     </style>
 </head>
@@ -99,11 +116,9 @@
                 <ul>
                     <li><span><a href="https://www.sacnas.org/" target="_blank">SACNAS</a> -- Society for the Advancement of Chicanos/Hispanics and Native Americans in Science</span></li>
                     <li><span><a href="https://newscience.org/" target="_blank">New Science organization</a> - funds basic science summer fellowships.</span></li>
-                        <li><span><a href="https://www.experiment.foundation/" target="_blank">experiment foundation</a> - place to get "challenge grants", similar ethos to New Science.</span></li>
-                        <li><span><a href="https://statmodeling.stat.columbia.edu/" target="_blank">Statistical modeling blog</a> - Statistics, computing, machine learning, and scientific communication, meta-science</span></li>
-                        <li><span><a href="https://retractionwatch.com/" target="_blank">Retraction Watch</a> - blog about retractions in science</span></li>
-
-
+                    <li><span><a href="https://www.experiment.foundation/" target="_blank">experiment foundation</a> - place to get "challenge grants", similar ethos to New Science.</span></li>
+                    <li><span><a href="https://statmodeling.stat.columbia.edu/" target="_blank">Statistical modeling blog</a> - Statistics, computing, machine learning, and scientific communication, meta-science</span></li>
+                    <li><span><a href="https://retractionwatch.com/" target="_blank">Retraction Watch</a> - blog about retractions in science</span></li>
                 </ul>
             </div>
 
@@ -115,8 +130,7 @@
                     <li><span><a href="https://guzey.com/how-life-sciences-actually-work/" target="_blank">Alexy Guzey's essay "How the Life Sciences Work"</a></span></li>
                     <li><span><a href="https://felsenst.github.io/" target="_blank">Joe Felsenstein</a> - A prominent figure in the field of evolutionary biology, good rants.</span></li>
                     <li><span><a href="https://mobot.org/mobot/research/apweb/" target="_blank">Peter F. Stevens' angiosperm phylogeny</a> - has great warning to readers: "All clades are hypotheses, and as hypotheses they may be overturned".</span></li>
-                    <li><span><a href="https://memetics.timtyler.org/books/" target="_blank"> Books on Memes and Memetic evolution</a> Tim Tyler's list of books on memes".</span></li>
-
+                    <li><span><a href="https://memetics.timtyler.org/books/" target="_blank">Books on Memes and Memetic evolution</a> Tim Tyler's list of books on memes".</span></li>
                 </ul>
             </div>
 
@@ -125,10 +139,8 @@
                 <p>I spend a lot of time making, listening to and thinking about music. </p>
                 <p>Check out my <a href="music.html">music</a> page</p>
                 <ul>
-                    
-                    <li><span><a href= "https://www.dublab.com/">dublab</a> "community-ran internet radio station"
-
-                    <li><span><a href= "https://walzr.com/bop-spotter">BOP Spotter project</a> "[Riley Walz] installed a box high up on a pole somewhere in the Mission of San Francisco. Inside is a crappy Android phone, set to Shazam constantly, 24 hours a day, 7 days a week. It's solar powered, and the mic is pointed down at the street below."
+                    <li><span><a href="https://www.dublab.com/">dublab</a> "community-ran internet radio station"</span></li>
+                    <li><span><a href="https://walzr.com/bop-spotter">BOP Spotter project</a> "[Riley Walz] installed a box high up on a pole somewhere in the Mission of San Francisco. Inside is a crappy Android phone, set to Shazam constantly, 24 hours a day, 7 days a week. It's solar powered, and the mic is pointed down at the street below."</span></li>
                     <li><span><a href="https://www.youtube.com/c/TerminalPassage" target="_blank">Terminal Passage</a> - Youtube channel compiling 'rare grooves', lots of jazz, prog, fusion.</span></li>
                     <li><span><a href="https://www.youtube.com/channel/UCgbtObeRgXF4loR5gpZERfQ" target="_blank">Gospel Nostalgia</a> - Youtube channel compiling vintage, often rare Gospel music.</span></li>
                     <li><span><a href="https://www.youtube.com/@professorskye" target="_blank">Prof. Skye Music Reviews</a> - 'always positive' new music review channel run by a French professor, based on countering the tendency of 'mid-20s music death' (the fact you think new music sucks once you turn roughly 25.)</span></li>
@@ -139,8 +151,7 @@
                 <h2>History, Philosophy, etc.</h2>
                 <ul>
                     <li><span><a href="https://meaningness.com/" target="_blank">David Chapman's 'Meaningness'</a> - hyperlinked book (see project Xandau) about how we make sense of the world.</span></li>
-                    <li><span><a href="http://robert-lafleur.blogspot.com/" target="_blank">Robert LaFleur's Round and Square'</a> blog discusses historical and anthropological topics, 
-                        like similarities between East Asian poetry and American country songs <a href="http://robert-lafleur.blogspot.com/search/label/Hurtin%27-Leavin%27-Longin%27" target="_blank">here</a>.</span></li>
+                    <li><span><a href="http://robert-lafleur.blogspot.com/" target="_blank">Robert LaFleur's Round and Square'</a> blog discusses historical and anthropological topics, like similarities between East Asian poetry and American country songs <a href="http://robert-lafleur.blogspot.com/search/label/Hurtin%27-Leavin%27-Longin%27" target="_blank">here</a>.</span></li>
                 </ul>
             </div>
             
@@ -152,9 +163,8 @@
                 </ul>
             </div>
 
-
             <div class="link-card">
-                <h2>Other.</h2>
+                <h2>Other</h2>
                 <ul>
                     <li><span><a href="https://www.xanadu.net/" target="_blank">project Xanadu</a> - a new paradigm for text</span></li>
                     <li><span><a href="https://www.dharmaoverground.org/" target="_blank">dharmaoverground</a> - extremely ... hardcore? meditation forum</span></li>
@@ -162,16 +172,13 @@
                 </ul>
             </div>
 
-           
             <div class="link-card">
                 <h2>Personal sites</h2>
                 <ul>
                     <li><span><a href="https://www.jaronlanier.com/" target="_blank">Jaron Lanier</a> - computer scientist, musician, writer, artist, etc.</span></li>
                     <li><span><a href="https://virgilabloh.com/free-game/" target="_blank">Virgil Abloh</a> - late fashion designer, artist.</span></li>
                     <li><span><a href="https://timtyler.org/" target="_blank">Tim Tyler</a> - software engineer, author of books on meme evolution.</span></li>
-
                 </ul>
-            </div>
             </div>
         </div>
     </div>
