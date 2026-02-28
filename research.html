@@ -2,241 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Nic Bone</title>
     <style>
-        /* Preserving your original color scheme - it's unique and memorable! */
         body {
-            background-color: #d1edcd;
-            color: #000000;
-            font-family: Geneva, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            
             margin: 0;
-            padding: 0;
-            line-height: 1.5;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
-        
         .container {
-            width: 1000px;
+            max-width: 700px;
             margin: 0 auto;
-            background-color: #FFDDAA;
-            position: relative;
-            border: 1px solid #094351;
-            box-shadow: 3px 3px 0 #094351;
-            /* Slight texture for that early-web feel */
-            background-image: linear-gradient(
-                45deg,
-                #FFDDAA 25%,
-                #FFE5BB 25%,
-                #FFE5BB 50%,
-                #FFDDAA 50%,
-                #FFDDAA 75%,
-                #FFE5BB 75%,
-                #FFE5BB 100%
-            );
-            background-size: 40px 40px;
-            background-attachment: fixed;
         }
-
-        .left-column {
-            width: 200px;
-            float: left;
-            text-align: right;
-            padding: 20px;
-            position: sticky;
-            top: 20px;
+        h1 {
+            font-size: 1.5em;
+            font-weight: normal;
+            margin-bottom: 1.5em;
         }
-
-        .right-column {
-            width: 720px;
-            float: right;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.9);
-            border-left: 1px solid #094351;
-            min-height: 100vh;
+        h2 {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0.5em;
         }
-
-        h1, h2 {
-            color: #094351;
-            font-family: Georgia, serif;
-        }
-
         h3 {
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            color: #094351;
-            border-bottom: 2px dotted #094351;
-            padding-bottom: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 0.4em;
+            margin-top: 1.2em;
         }
-
+        .back {
+            margin-bottom: 2em;
+            font-size: 0.9em;
+        }
         a {
-            color: #cc1515;
+            color: #0000cc;
             text-decoration: none;
-            transition: color 0.2s;
         }
-
         a:hover {
-            color: #094351;
             text-decoration: underline;
         }
-
-        .nav {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 30px;
+        .section-label {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888;
+            margin-bottom: 1.2em;
+            margin-top: 2.5em;
+            padding-bottom: 0.4em;
+            border-bottom: 1px solid #ccc;
         }
-
-        .nav li {
-            margin-bottom: 15px;
-        }
-
-        .nav a {
-            padding: 5px 10px;
-            border: 1px solid #094351;
-            display: inline-block;
-            background: white;
-            box-shadow: 2px 2px 0 #094351;
-            transition: all 0.2s;
-        }
-
-        .nav a:hover {
-            transform: translate(2px, 2px);
-            box-shadow: none;
-            text-decoration: none;
-        }
-
-        .research-section {
-            margin-bottom: 40px;
-            position: relative;
-        }
-
         .project {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: white;
-            border: 1px solid #094351;
-            box-shadow: 3px 3px 0 #094351;
+            margin-bottom: 2.5em;
+            padding-bottom: 2em;
+            border-bottom: 1px solid #ddd;
         }
-
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project p {
+            margin: 0.7em 0;
+        }
+        .project ul {
+            margin: 0.7em 0;
+            padding-left: 1.4em;
+        }
+        .project li {
+            margin-bottom: 0.4em;
+        }
         .project-image {
             float: right;
-            width: 250px;
-            margin-left: 20px;
-            margin-bottom: 10px;
-            border: 1px solid #094351;
-            padding: 5px;
-            background: white;
+            width: 200px;
+            margin: 0 0 12px 20px;
+            border: 1px solid #ddd;
         }
-
         .project-links {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed #094351;
+            margin-top: 1em;
+            font-size: 0.9em;
         }
-
         .project-links a {
-            margin-right: 15px;
+            margin-right: 1.5em;
         }
-
-        /* Enhancement: Custom bullet points */
-        .project ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .project ul li::before {
-            content: "►";
-            color: #094351;
-            font-size: 0.8em;
-            margin-right: 10px;
-        }
-
-        /* Enhancement: Highlight boxes */
-        .highlight-box {
-            background: #d1edcd;
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #094351;
-            box-shadow: 3px 3px 0 #094351;
-        }
-
-        /* Clear floats */
         .clearfix::after {
             content: "";
             clear: both;
             display: table;
         }
-
-        @media (max-width: 1020px) {
-            .container {
-                width: 95%;
-            }
-            .right-column {
-                width: 70%;
-            }
-            .project-image {
-                width: 200px;
-            }
+        footer {
+            margin-top: 3em;
+            font-size: 0.85em;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 1em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-column">
-            <h1>Research</h1>
-            <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="interesting.html">Links</a></li>
+        <p class="back"><a href="index.html">&larr; back</a></p>
+
+        <h1>Research</h1>
+
+        <p class="section-label">General interests</p>
+
+        <div class="project">
+            <h2>Translating Domain Knowledge to Testable Models</h2>
+            <p>I am interested by the challenge of translating domain expertise into testable statistical frameworks — especially in biology, where difficult-to-code observational findings are often left out of the modelling process.</p>
+        </div>
+
+        <div class="project">
+            <h2>History and Future of Evolutionary Biology</h2>
+            <p>The convergence of past and present contributors in the field, their cultural context, and the resulting assumptions, biases, and inferences that shape evolutionary thinking has always interested me. I believe that fully acknowledging and reconciling this historical legacy with the present is crucial for advancing evolutionary research beyond the field's active justification of systemic racism, eugenics, and discrimination.</p>
+        </div>
+
+        <p class="section-label">PhD dissertation</p>
+
+        <div class="project clearfix">
+            <h2>Dissertation Overview</h2>
+            <img src="content/phylo.png" alt="Dissertation" class="project-image">
+            <p>My dissertation explores the intersection of complex traits, methodological approaches in macroevolution, and the evolution of bird migration. Three key questions:</p>
+            <ul>
+                <li>How effectively do our current methods identify and analyze "complex" biological traits when simplified into discrete states?</li>
+                <li>To what extent can migration in birds be adequately represented by discrete states?</li>
+                <li>What can we gain by pushing the limits of discrete state analysis in the context of complex traits?</li>
             </ul>
         </div>
-        <div class="right-column">
-            <div class="research-section">
-                <div class="highlight-box">
-                    <h2>General Research Interests</h2>
-                    <div class="project">
-                        <h3>Translating Domain Knowledge to Testable Models</h3>
-                        <p>I am interested by the challenge of translating domain expertise into testable statistical frameworks. Especially in biology where the difficult-to-code observational / experimental findings often are left out of the modelling process.</p>
-                    </div>
-                    
-                    <div class="project">
-                        <h3>History and Future of Evolutionary Biology</h3>
-                        <p>The convergence of past and present contributors in the field, their cultural context, and the resulting assumptions, biases, and inferences that shape evolutionary thinking has always interested me. I believe that fully acknowledging and reconciling this historical legacy with the present is crucial for advancing evolutionary research beyond the field's active justification of systemic racism, eugenics, and discrimination. I hope to eventually expand my interest in this convergence into a more formal research effort.</p>
-                    </div>
-                </div>
 
-                <h2>PhD Dissertation Projects</h2>
-                <div class="project">
-                    <h3>Dissertation Overview</h3>
-                    <img src="content/phylo.png" alt="Dissertation" class="project-image">
-                    <p>My dissertation explores the intersection of complex traits, methodological approaches in macroevolution, and the evolution of bird migration. It is structured around three key questions:</p>
-                    <ul>
-                        <li>How effectively do our current methods identify and analyze 'complex' biological traits when simplified into discrete states?</li>
-                        <li>To what extent can migration in birds, as a complex trait known to have many axes of continuous variation, be adequately represented by discrete states?</li>
-                        <li>What can we gain by pushing the limits of discrete state analysis in the context of complex traits?</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h3>Quantifying Migratory Behavior with eBird</h3>
-                    <img src="content/duck.png" alt="Quantifying Migratory Behavior" class="project-image">
-                    <p>The study of avian migration presents a distinctive challenge due to the many ways a bird can be considered a 'migrant', most of which are difficult to measure directly. This is a common problem in comparative biology, as many times the traits that researchers are interested in are difficult to wrangle into a simple dataset.</p>
-                    <p>Developing effective methods to measure and model these difficult-to-measure axes is essential for understanding the evolution of migration as a trait over long time scales, as well as understanding the relationship between migration and other traits.</p>
-                    <div class="project-links">
-                        <a href="BoneIGC_2024.pdf">► IGC Symposium Poster</a>
-                        <a href="https://github.com/nbone455/macrofidelity">► GitHub Repository</a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3>Using Hidden States Markov Models</h3>
-                    <img src="content/markov.png" alt="Hidden States Markov Models" class="project-image">
-                    <p>The first part of my dissertation focuses on the efficacy of Structured Hidden Markov Models (SHMMs) in identifying threshold traits - discretized traits with underlying one-dimensional continuous variation. This approach allows us to test whether a discrete trait is best described as a one-dimensional threshold trait, even when only discrete data are available.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/nbone455/sHMM-sim/">► View Code Repository</a>
-                    </div>
-                </div>
+        <div class="project clearfix">
+            <h2>Quantifying Migratory Behavior with eBird</h2>
+            <img src="content/duck.png" alt="Migratory Behavior" class="project-image">
+            <p>The study of avian migration presents a distinctive challenge due to the many ways a bird can be considered a "migrant," most of which are difficult to measure directly. Developing effective methods to measure and model these axes is essential for understanding the evolution of migration over long time scales.</p>
+            <div class="project-links">
+                <a href="BoneIGC_2024.pdf">IGC Symposium Poster</a>
+                <a href="https://github.com/nbone455/macrofidelity">GitHub</a>
             </div>
         </div>
+
+        <div class="project clearfix">
+            <h2>Using Hidden State Markov Models</h2>
+            <img src="content/markov.png" alt="Hidden States Markov Models" class="project-image">
+            <p>The first part of my dissertation focuses on the efficacy of Structured Hidden Markov Models (SHMMs) in identifying threshold traits — discretized traits with underlying one-dimensional continuous variation. This allows us to test whether a discrete trait is best described as a one-dimensional threshold trait, even when only discrete data are available.</p>
+            <div class="project-links">
+                <a href="https://github.com/nbone455/sHMM-sim/">GitHub</a>
+            </div>
+        </div>
+
+        <footer>nicbone[at]posteo.net</footer>
     </div>
 </body>
 </html>

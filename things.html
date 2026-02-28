@@ -1,58 +1,82 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>things</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things - Nic Bone</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body {
-            background-color: #ffffff; /* White background */
-            color: #0000ff; /* Blue text color */
-            font-family: Arial, sans-serif; /* Modern font */
+            background-color: #ffffff;
+            color: #111111;
+            
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
-
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
         h1 {
-            font-size: 36px;
+            font-size: 1.5em;
+            font-weight: normal;
+            margin-bottom: 1.5em;
         }
-
-        .blog-post {
-            margin-top: 20px;
-            border: 1px solid #0000ff; /* Blue border */
-            padding: 10px;
-            background-color: #e0e0e0; /* Light gray background */
+        .back {
+            margin-bottom: 2em;
+            font-size: 0.9em;
+        }
+        a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .post-item {
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid #eee;
+        }
+        .post-item:last-of-type {
+            border-bottom: none;
+        }
+        #markdown-content {
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #ccc;
         }
     </style>
 </head>
-
 <body>
-    <h1>things</h1>
+    <div class="container">
+        <p class="back"><a href="index.html">&larr; back</a></p>
 
-    <div class="blog-post">
-        <h2><a href="#" onclick="loadMarkdown('post1.md')">post 1</a></h2>
+        <h1>Things</h1>
+
+        <div class="post-item">
+            <a href="#" onclick="loadMarkdown('post1.md'); return false;">post 1</a>
+        </div>
+
+        <div class="post-item">
+            <a href="#" onclick="loadMarkdown('post2.md'); return false;">post 2</a>
+        </div>
+
+        <div id="markdown-content"></div>
     </div>
-
-    <div class="blog-post">
-        <h2><a href="#" onclick="loadMarkdown('post2.md')">post 2</a></h2>
-    </div>
-
-    <!-- Container to display the rendered markdown content -->
-    <div id="markdown-content"></div>
 
     <script>
         function loadMarkdown(filePath) {
             fetch(filePath)
                 .then(response => response.text())
                 .then(text => {
-                    const htmlContent = marked(text);
-                    document.getElementById('markdown-content').innerHTML = htmlContent;
+                    document.getElementById('markdown-content').innerHTML = marked.parse(text);
                 })
                 .catch(error => {
                     console.error("Error fetching the Markdown file: ", error);
                 });
         }
     </script>
-
 </body>
-
 </html>
-
